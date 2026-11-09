@@ -7,25 +7,11 @@
 
 <title>Sobhan Ganji — Official Website</title>
 <meta name="description" content="The personal website of Sobhan Ganji. Writing, poetry, music, ideas and independent creations.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-.enamad {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 12px 0;
-  padding: 0;
-  border: none;
-}
-
-.enamad img {
-  width: 45px;
-  height: auto;
-  opacity: 0.75;
-}
-  
 <style>
 :root {
   --red: #ff0000;
@@ -337,6 +323,7 @@ footer {
   background: var(--black);
   color: var(--white);
   padding: 65px 8% 30px;
+  position: relative;
 }
 
 .footer-name {
@@ -363,12 +350,32 @@ footer {
 .copyright {
   border-top: 1px solid #333;
   padding-top: 20px;
+  padding-right: 65px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
   color: #777;
   font-size: 11px;
+}
+
+/* ENAMAD */
+
+.enamad {
+  position: absolute;
+  right: 8%;
+  bottom: 25px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  z-index: 2;
+}
+
+.enamad img {
+  display: block;
+  width: 45px;
+  height: auto;
+  cursor: pointer;
 }
 
 /* MOBILE */
@@ -384,6 +391,19 @@ footer {
   .statement, .hardo { padding: 80px 6%; }
   .statement h2 { letter-spacing: -2px; }
   .hardo h2 { letter-spacing: -5px; }
+
+  .enamad {
+    right: 6%;
+    bottom: 22px;
+  }
+
+  .enamad img {
+    width: 40px;
+  }
+
+  .copyright {
+    padding-right: 55px;
+  }
 }
 
 @media(max-width: 420px) {
@@ -429,7 +449,6 @@ footer {
     A space for ideas, words, sounds, experiments and creations. Exploring the intersection of logic and imagination.
   </p>
 
-  <!-- Put your signature image in assets/signature.png -->
   <img class="signature"
        src="assets/signature.png"
        alt="Sobhan Ganji signature"
@@ -555,17 +574,21 @@ footer {
     <a href="privacy.html">PRIVACY ↗</a>
     <a href="LICENSE">LICENSE ↗</a>
   </div>
-<div class="enamad">
-  <a referrerpolicy="origin"
-     target="_blank"
-     href="https://trustseal.enamad.ir/?id=8566264&Code=gCLOEWK33cfGubUjO6U4eYeX0HSO8Bj9">
-    <img
+
+  <!-- ENAMAD -->
+  <div class="enamad">
+    <a
       referrerpolicy="origin"
-      src="https://trustseal.enamad.ir/logo.aspx?id=8566264&Code=gCLOEWK33cfGubUjO6U4eYeX0HSO8Bj9"
-      alt="نماد اعتماد الکترونیکی"
-      style="cursor:pointer; width:110px; height:auto;">
-  </a>
-</div>
+      target="_blank"
+      href="https://trustseal.enamad.ir/?id=8566264&Code=gCLOEWK33cfGubUjO6U4eYeX0HSO8Bj9">
+      <img
+        referrerpolicy="origin"
+        src="https://trustseal.enamad.ir/logo.aspx?id=8566264&Code=gCLOEWK33cfGubUjO6U4eYeX0HSO8Bj9"
+        alt=""
+        code="gCLOEWK33cfGubUjO6U4eYeX0HSO8Bj9">
+    </a>
+  </div>
+
   <div class="copyright">
     <span>© 2026 SOBHAN GANJI</span>
     <span>INDEPENDENTLY CREATED.</span>
