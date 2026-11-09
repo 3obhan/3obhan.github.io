@@ -322,7 +322,7 @@ section.content {
 footer {
   background: var(--black);
   color: var(--white);
-  padding: 65px 8% 30px;
+  padding: 65px 8% 95px;
   position: relative;
 }
 
@@ -350,10 +350,8 @@ footer {
 .copyright {
   border-top: 1px solid #333;
   padding-top: 20px;
-  padding-right: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 20px;
   flex-wrap: wrap;
   color: #777;
@@ -363,15 +361,23 @@ footer {
 /* ENAMAD */
 
 .enamad {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 20px;
-  left: 50%
-  transform: translateX(-50%);
-  maargin: 0;
+  margin: 0;
   padding: 0;
+  z-index: 2;
+}
+
+.enamad a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .enamad img {
@@ -395,17 +401,19 @@ footer {
   .statement h2 { letter-spacing: -2px; }
   .hardo h2 { letter-spacing: -5px; }
 
+  footer {
+    padding: 55px 6% 90px;
+  }
+
   .enamad {
-    right: 6%;
-    bottom: 22px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 
   .enamad img {
     width: 40px;
-  }
-
-  .copyright {
-    padding-right: 55px;
   }
 }
 
@@ -448,7 +456,7 @@ footer {
 
   <p class="hero-description"
      data-en="A space for ideas, words, sounds, experiments and creations. Exploring the intersection of logic and imagination."
-     data-fa="فضایی برای ایده‌ها، کلمات، صداها، تجربه‌ها و آفرینش‌ها. جست‌وجو در سرزمین منطق و تخیل.”>
+     data-fa="فضایی برای ایده‌ها، کلمات، صداها، تجربه‌ها و آفرینش‌ها. جست‌وجو در مرز میان منطق و تخیل">
     A space for ideas, words, sounds, experiments and creations. Exploring the intersection of logic and imagination.
   </p>
 
@@ -472,7 +480,7 @@ footer {
   </h2>
 
   <p data-en="I create, write, experiment and build. This website brings together different sides of my work and the things I believe are worth sharing."
-     data-fa="می‌نویسم، می‌سازم، تجربه می‌کنم و می‌آفرینم. این وب‌سایت مجموعه‌ای از جنبه‌های مختلف کار من و چیزهایی است که شاید ارزش به اشتراک گذاشتن دارند.">
+     data-fa="می‌نویسم، می‌سازم، تجربه می‌کنم و می‌آفرینم. این وب‌سایت مجموعه‌ای از جنبه‌های مختلف کار من و چیزهایی‌ست که شاید ارزش به اشتراک گذاشتن دارند.">
     I create, write, experiment and build. This website brings together different sides of my work and the things I believe are worth sharing.
   </p>
 </div>
@@ -493,7 +501,7 @@ footer {
       <div>
         <h3 data-en="Books & Poetry" data-fa="کتاب و شعر">Books & Poetry</h3>
         <p data-en="Books, poetry collections and literary experiments."
-           data-fa="کتاب‌ها، شعرها و تجربه‌های ادبی .">
+           data-fa="کتاب‌ها، مجموعه‌های شعر و تجربه‌های ادبی.">
           Books, poetry collections and literary experiments.
         </p>
       </div>
@@ -505,7 +513,7 @@ footer {
       <div>
         <h3 data-en="Music" data-fa="موسیقی">Music</h3>
         <p data-en="Original music, recordings and sound projects."
-           data-fa="موسیقی مستقل، آثار موسیقایی و پروژه‌های شنیداری.">
+           data-fa="موسیقی مستقل، آثار صوتی و پروژه‌های شنیداری.">
           Original music, recordings and sound projects.
         </p>
       </div>
@@ -578,7 +586,6 @@ footer {
     <a href="LICENSE">LICENSE ↗</a>
   </div>
 
-  <!-- ENAMAD -->
   <div class="enamad">
     <a
       referrerpolicy="origin"
