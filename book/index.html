@@ -4,14 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#ff0000">
-<title>Book — Sobhan Ganji</title>
+<title>Books — Sobhan Ganji</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
   --red: #ff0000;
   --black: #050505;
   --white: #f5f5f5;
-  --gray: #999;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -66,7 +65,7 @@ h1 {
   margin: 25px 0;
 }
 .fa h1 { letter-spacing: 0; line-height: 1.2; }
-h1 span { color: var(--white); }
+h1 .dot { color: var(--white); }
 .hero p {
   font-size: 17px;
   line-height: 2;
@@ -163,7 +162,6 @@ h2 {
   color: #555;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 1px;
 }
 .product h4 {
   font-size: 20px;
@@ -238,7 +236,6 @@ h2 {
   font-weight: 900;
   margin-bottom: 18px;
 }
-.note > p { margin-bottom: 10px; }
 
 footer {
   background: var(--black);
@@ -282,47 +279,37 @@ footer a {
 
 <section class="hero">
   <div class="eyebrow" data-en="WORDS / STORIES / IDEAS" data-fa="کلمات / روایت‌ها / ایده‌ها">WORDS / STORIES / IDEAS</div>
-  <h1>BOOK<span>.</span></h1>
-  <p data-en="A home for books, poetry, stories and written works. An archive of words, thoughts and ideas worth keeping."
-     data-fa="خانه‌ای برای کتاب‌ها، شعرها، داستان‌ها و آثار نوشتاری؛ آرشیوی از کلمات، اندیشه‌ها و ایده‌هایی که ارزش ماندن دارند.">
-    A home for books, poetry, stories and written works. An archive of words, thoughts and ideas worth keeping.
+  <h1>
+    <span data-en="BOOKS" data-fa="کتاب‌ها">BOOKS</span><span class="dot">.</span>
+  </h1>
+  <p data-en="Fiction, essays and poems collections."
+     data-fa="مجموعه‌های شعر، داستان و جستار ">
+    A home for books, poetry collections, fiction, essays and poems.
   </p>
 </section>
 
 <main id="collections">
   <div class="heading">
     <h2 data-en="The Collection" data-fa="مجموعه آثار">The Collection</h2>
-    <span data-en="01 / BOOK" data-fa="۰۱ / خواندنی">01 / BOOK</span>
+    <span data-en="01 / BOOKS" data-fa="۰۱ / کتاب‌ها">01 / BOOKS</span>
   </div>
 
-  <!-- Cards -->
   <div class="grid">
-    <a class="card" href="#books">
-      <span class="number" data-en="01 / BOOKS" data-fa="۰۱ / خواندنی">01 / BOOKS</span>
-      <div>
-        <h3 data-en="Books" data-fa="خواندنی">Books</h3>
-        <p data-en="Published books available for purchase."
-           data-fa="کتاب‌های منتشرشده برای خرید.">
-          Published books available for purchase.
-        </p>
-      </div>
-    </a>
-
     <a class="card" href="#poetry-collections">
-      <span class="number" data-en="02 / POETRY COLLECTIONS" data-fa="۰۲ / مجموعه‌های شعر">02 / POETRY COLLECTIONS</span>
+      <span class="number" data-en="01 / POETRY COLLECTIONS" data-fa="۰۱ / مجموعه اشعار">01 / POETRY COLLECTIONS</span>
       <div>
-        <h3 data-en="Poetry Collections" data-fa="مجموعه‌های شعر">Poetry Collections</h3>
+        <h3 data-en="Poetry Collections" data-fa="مجموعه اشعار">Poetry Collections</h3>
         <p data-en="Published poetry collections available for purchase."
-           data-fa="مجموعه‌های شعر منتشرشده برای خرید.">
+           data-fa="مجموعه‌ شعر">
           Published poetry collections available for purchase.
         </p>
       </div>
     </a>
 
-    <a class="card" href="#stories">
-      <span class="number" data-en="03 / STORIES" data-fa="۰۳ / داستان‌ها">03 / STORIES</span>
+    <a class="card" href="#fictions">
+      <span class="number" data-en="02 / FICTIONS" data-fa="۰۲ / داستان‌ها">02 / FICTIONS</span>
       <div>
-        <h3 data-en="Stories" data-fa="داستان‌ها">Stories</h3>
+        <h3 data-en="Fictions" data-fa="داستان‌ها">Fictions</h3>
         <p data-en="Story collections and short fiction."
            data-fa="مجموعه‌های داستان و روایت‌های کوتاه.">
           Story collections and short fiction.
@@ -331,52 +318,35 @@ footer a {
     </a>
 
     <a class="card" href="#essays">
-      <span class="number" data-en="04 / LITERARY ESSAYS" data-fa="۰۴ / جستارهای ادبی-هنری">04 / LITERARY ESSAYS</span>
+      <span class="number" data-en="03 / ESSAYS" data-fa="۰۳ / جستارها">03 / ESSAYS</span>
       <div>
-        <h3 data-en="Literary Essays" data-fa="جستارهای ادبی-هنری">Literary Essays</h3>
-        <p data-en="Essay collections and independent literary writings."
-           data-fa="مجموعه‌های جستار و نوشته‌های ادبی-هنری.">
-          Essay collections and independent literary writings.
+        <h3 data-en="Essays" data-fa="جستارها">Essays</h3>
+        <p data-en="Essay collections and independent writings."
+           data-fa="مجموعه‌های جستار و نوشته‌های مستقل.">
+          Essay collections and independent writings.
+        </p>
+      </div>
+    </a>
+
+    <a class="card" href="#poetry">
+      <span class="number" data-en="04 / POETRY" data-fa="۰۴ / شعر">04 / POETRY</span>
+      <div>
+        <h3 data-en="Poetry" data-fa="شعر">Poetry</h3>
+        <p data-en="Individual poems available to read."
+           data-fa="شعر">
+          Individual poems available to read.
         </p>
       </div>
     </a>
   </div>
 
-  <!-- ========== خواندنی / Books ========== -->
-  <div id="books" class="note">
-    <h3 data-en="Books" data-fa="خواندنی">Books</h3>
-    <p data-en="Published books available for purchase."
-       data-fa="کتاب‌های منتشرشده برای خرید.">
-      Published books available for purchase.
-    </p>
-
-    <div class="products">
-      <div class="product">
-        <div class="product-cover">COVER</div>
-        <h4 data-en="Book Title One" data-fa="عنوان کتاب اول">Book Title One</h4>
-        <div class="meta" data-en="Novel · 2024" data-fa="رمان · ۱۴۰۳">Novel · 2024</div>
-        <div class="price">۱۸۰,۰۰۰ تومان</div>
-        <a href="#" class="buy" data-en="Buy Now" data-fa="خرید">Buy Now</a>
-      </div>
-
-      <div class="product">
-        <div class="product-cover">COVER</div>
-        <h4 data-en="Book Title Two" data-fa="عنوان کتاب دوم">Book Title Two</h4>
-        <div class="meta" data-en="Novel · 2025" data-fa="رمان · ۱۴۰۴">Novel · 2025</div>
-        <div class="price">۲۱۰,۰۰۰ تومان</div>
-        <a href="#" class="buy" data-en="Buy Now" data-fa="خرید">Buy Now</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========== مجموعه‌های شعر ========== -->
+  <!-- مجموعه اشعار -->
   <div id="poetry-collections" class="note">
-    <h3 data-en="Poetry Collections" data-fa="مجموعه‌های شعر">Poetry Collections</h3>
+    <h3 data-en="Poetry Collections" data-fa="مجموعه اشعار">Poetry Collections</h3>
     <p data-en="Published poetry collections available for purchase."
-       data-fa="مجموعه‌های شعر منتشرشده برای خرید.">
+       data-fa="مجموعه‌ شعرها">
       Published poetry collections available for purchase.
     </p>
-
     <div class="products">
       <div class="product">
         <div class="product-cover">COVER</div>
@@ -388,14 +358,13 @@ footer a {
     </div>
   </div>
 
-  <!-- ========== داستان‌ها ========== -->
-  <div id="stories" class="note">
-    <h3 data-en="Stories" data-fa="داستان‌ها">Stories</h3>
+  <!-- Fictions -->
+  <div id="fictions" class="note">
+    <h3 data-en="Fictions" data-fa="داستان‌ها">Fictions</h3>
     <p data-en="Story collections available for purchase."
-       data-fa="مجموعه‌های داستان برای خرید.">
+       data-fa="داستانی">
       Story collections available for purchase.
     </p>
-
     <div class="products">
       <div class="product">
         <div class="product-cover">COVER</div>
@@ -407,14 +376,13 @@ footer a {
     </div>
   </div>
 
-  <!-- ========== جستارهای ادبی-هنری ========== -->
+  <!-- Essays -->
   <div id="essays" class="note">
-    <h3 data-en="Literary Essays" data-fa="جستارهای ادبی-هنری">Literary Essays</h3>
-    <p data-en="Essay collections and independent literary writings available for purchase."
-       data-fa="مجموعه‌های جستار و نوشته‌های ادبی-هنری برای خرید.">
-      Essay collections and independent literary writings available for purchase.
+    <h3 data-en="Essays" data-fa="جستارها">Essays</h3>
+    <p data-en="Essay collections available for purchase."
+       data-fa="مجموعه‌ جستارها">
+      Essay collections available for purchase.
     </p>
-
     <div class="products">
       <div class="product">
         <div class="product-cover">COVER</div>
@@ -426,14 +394,13 @@ footer a {
     </div>
   </div>
 
-  <!-- ========== شعرها (برای خواندن) ========== -->
-  <div id="poems" class="note">
-    <h3 data-en="Poems" data-fa="شعرها">Poems</h3>
-    <p data-en="A few poem"
-       data-fa="شعر">
+  <!-- Poetry (برای خواندن) -->
+  <div id="poetry" class="note">
+    <h3 data-en="Poetry" data-fa="شعر">Poetry</h3>
+    <p data-en="Individual poems available to read."
+       data-fa="شعرهای تکی برای خواندن.">
       Individual poems available to read.
     </p>
-
     <div class="poetry-list">
       <a href="#" class="poem-item">
         <h4 data-en="Poem Title One" data-fa="عنوان شعر اول">Poem Title One</h4>
