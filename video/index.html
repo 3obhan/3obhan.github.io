@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ff0000">
+<title>Video — Sobhan Ganji</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#ff0000;--black:#050505;--white:#f5f5f5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--red);color:var(--black);font-family:'DM Sans',sans-serif}
+body.fa{font-family:'Vazirmatn',sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+header{padding:24px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--black)}
+.brand{font-size:19px;font-weight:900}.brand span{color:var(--white)}
+nav{display:flex;gap:22px;align-items:center}
+nav a,nav button{font-size:11px;font-weight:900;text-transform:uppercase}
+.lang{border:1px solid var(--black);background:transparent;padding:8px 13px}
+.hero{padding:100px 8% 85px;min-height:430px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-size:12px;font-weight:900;letter-spacing:4px;text-transform:uppercase}
+h1{font-size:clamp(75px,15vw,175px);line-height:.85;letter-spacing:-9px;font-weight:900;margin:25px 0}
+.fa h1{letter-spacing:0;line-height:1.2}
+h1 span{color:var(--white)}
+.hero p{font-size:17px;line-height:2;max-width:650px;font-weight:600}
+main{background:var(--black);color:var(--white);padding:80px 8% 110px}
+.heading{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid #444;padding-bottom:20px;margin-bottom:35px}
+h2{font-size:clamp(32px,6vw,65px);font-weight:900;letter-spacing:-3px}.fa h2{letter-spacing:0}
+.heading span{color:var(--red);font-size:12px;font-weight:900}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#333;border:1px solid #333}
+.card{background:var(--black);padding:32px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between;transition:.2s}
+.card:hover{background:var(--red);color:var(--black)}
+.number{color:var(--red);font-size:12px;font-weight:900}.card:hover .number{color:var(--black)}
+.card h3{font-size:clamp(25px,4vw,42px);font-weight:900;margin:25px 0 10px}
+.card p{font-size:14px;color:#aaa;line-height:1.9}.card:hover p{color:var(--black)}
+.note{padding:55px 0 0;color:#aaa;line-height:2;max-width:700px}
+footer{background:var(--black);color:var(--white);padding:30px 8%;border-top:1px solid #333;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px}
+footer a{color:var(--red);font-weight:800}
+@media(max-width:650px){header{padding:20px 5%}nav{gap:10px}nav a{font-size:9px}.hero{padding:75px 6%}.hero h1{letter-spacing:-5px}main{padding:65px 6%}.grid{grid-template-columns:1fr}.card{min-height:180px}footer{padding:30px 6%}}
+</style>
+</head>
+<body>
+<header>
+<a href="/" class="brand">SOBHAN <span>GANJI.</span></a>
+<nav>
+<a href="/" data-en="Home" data-fa="خانه">Home</a>
+<a href="#collections" data-en="Collections" data-fa="مجموعه‌ها">Collections</a>
+<button class="lang" onclick="toggleLanguage()">FA</button>
+</nav>
+</header>
+
+<section class="hero">
+<div class="eyebrow" data-en="IMAGE / DESIGN / MOTION" data-fa="تصویر / طراحی / حرکت">IMAGE / DESIGN / MOTION</div>
+<h1>VIDEO<span>.</span></h1>
+<p data-en="A visual archive of videos, films, graphic design, logos, posters and other visual creations."
+data-fa="آرشیوی تصویری از ویدئوها، فیلم‌ها، طراحی گرافیک، لوگوها، پوسترها و دیگر آثار بصری.">A visual archive of videos, films, graphic design, logos, posters and other visual creations.</p>
+</section>
+
+<main id="collections">
+<div class="heading"><h2 data-en="Visual Works" data-fa="آثار دیداری">Visual Works</h2><span>03 / VIDEO</span></div>
+<div class="grid">
+<a class="card" href="#films"><span class="number">01 / FILM</span><div><h3 data-en="Films & Videos" data-fa="فیلم و ویدئو">Films & Videos</h3><p data-en="Films, short videos and moving-image projects." data-fa="فیلم‌ها، ویدئوهای کوتاه و پروژه‌های تصویری متحرک.">Films, short videos and moving-image projects.</p></div></a>
+<a class="card" href="#logos"><span class="number">02 / IDENTITY</span><div><h3 data-en="Logos & Identity" data-fa="لوگو و هویت بصری">Logos & Identity</h3><p data-en="Logo design, visual identities and brand graphics." data-fa="طراحی لوگو، هویت بصری و گرافیک برندها.">Logo design, visual identities and brand graphics.</p></div></a>
+<a class="card" href="#posters"><span class="number">03 / GRAPHIC</span><div><h3 data-en="Posters & Graphics" data-fa="پوستر و گرافیک">Posters & Graphics</h3><p data-en="Posters, illustrations and graphic experiments." data-fa="پوسترها، تصویرسازی‌ها و تجربه‌های گرافیکی.">Posters, illustrations and graphic experiments.</p></div></a>
+<a class="card" href="#visual"><span class="number">04 / EXPERIMENTS</span><div><h3 data-en="Visual Experiments" data-fa="تجربه‌های بصری">Visual Experiments</h3><p data-en="Independent visual explorations and creative experiments." data-fa="جست‌وجوهای بصری مستقل و تجربه‌های خلاقانه.">Independent visual explorations and creative experiments.</p></div></a>
+</div>
+<div id="films" class="note"><h3 data-en="Films & Videos" data-fa="فیلم و ویدئو">Films & Videos</h3><p data-en="Video previews, descriptions and viewing links will appear here." data-fa="پیش‌نمایش ویدئوها، توضیحات و لینک تماشا در این قسمت قرار می‌گیرد.">Video previews, descriptions and viewing links will appear here.</p></div>
+<div id="logos" class="note"><h3 data-en="Logos & Identity" data-fa="لوگو و هویت بصری">Logos & Identity</h3><p data-en="Selected logo designs and identity projects." data-fa="نمونه‌های منتخب طراحی لوگو و پروژه‌های هویت بصری.">Selected logo designs and identity projects.</p></div>
+<div id="posters" class="note"><h3 data-en="Posters & Graphics" data-fa="پوستر و گرافیک">Posters & Graphics</h3><p data-en="Posters, graphics and illustrations." data-fa="پوسترها، آثار گرافیکی و تصویرسازی‌ها.">Posters, graphics and illustrations.</p></div>
+<div id="visual" class="note"><h3 data-en="Visual Experiments" data-fa="تجربه‌های بصری">Visual Experiments</h3><p data-en="Visual studies and experimental creations." data-fa="مطالعات تصویری و آفرینش‌های تجربی.">Visual studies and experimental creations.</p></div>
+</main>
+
+<footer><span>© 2026 SOBHAN GANJI</span><a href="mailto:Sobhan.Ganji@Yahoo.com">CONTACT ↗</a><a href="/">HOME ↗</a></footer>
+<script>
+let language='en';
+function toggleLanguage(){
+language=language==='en'?'fa':'en';
+document.documentElement.lang=language;
+document.documentElement.dir=language==='fa'?'rtl':'ltr';
+document.body.classList.toggle('fa',language==='fa');
+document.querySelectorAll('[data-en]').forEach(el=>el.innerHTML=el.getAttribute('data-'+language));
+document.querySelector('.lang').textContent=language==='en'?'FA':'EN';
+}
+</script>
+</body>
+</html>
 
