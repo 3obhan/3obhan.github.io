@@ -1,1 +1,89 @@
 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ff0000">
+<title>Music — Sobhan Ganji</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#ff0000;--black:#050505;--white:#f5f5f5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--red);color:var(--black);font-family:'DM Sans',sans-serif}
+body.fa{font-family:'Vazirmatn',sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+header{padding:24px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--black)}
+.brand{font-size:19px;font-weight:900}.brand span{color:var(--white)}
+nav{display:flex;gap:22px;align-items:center}
+nav a,nav button{font-size:11px;font-weight:900;text-transform:uppercase}
+.lang{border:1px solid var(--black);background:transparent;padding:8px 13px}
+.hero{padding:100px 8% 85px;min-height:430px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-size:12px;font-weight:900;letter-spacing:4px;text-transform:uppercase}
+h1{font-size:clamp(75px,15vw,175px);line-height:.85;letter-spacing:-9px;font-weight:900;margin:25px 0}
+.fa h1{letter-spacing:0;line-height:1.2}
+h1 span{color:var(--white)}
+.hero p{font-size:17px;line-height:2;max-width:650px;font-weight:600}
+main{background:var(--black);color:var(--white);padding:80px 8% 110px}
+.heading{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid #444;padding-bottom:20px;margin-bottom:35px}
+h2{font-size:clamp(32px,6vw,65px);font-weight:900;letter-spacing:-3px}.fa h2{letter-spacing:0}
+.heading span{color:var(--red);font-size:12px;font-weight:900}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#333;border:1px solid #333}
+.card{background:var(--black);padding:32px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between;transition:.2s}
+.card:hover{background:var(--red);color:var(--black)}
+.number{color:var(--red);font-size:12px;font-weight:900}.card:hover .number{color:var(--black)}
+.card h3{font-size:clamp(25px,4vw,42px);font-weight:900;margin:25px 0 10px}
+.card p{font-size:14px;color:#aaa;line-height:1.9}.card:hover p{color:var(--black)}
+.note{padding:55px 0 0;color:#aaa;line-height:2;max-width:700px}
+footer{background:var(--black);color:var(--white);padding:30px 8%;border-top:1px solid #333;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px}
+footer a{color:var(--red);font-weight:800}
+@media(max-width:650px){header{padding:20px 5%}nav{gap:10px}nav a{font-size:9px}.hero{padding:75px 6%}.hero h1{letter-spacing:-5px}main{padding:65px 6%}.grid{grid-template-columns:1fr}.card{min-height:180px}footer{padding:30px 6%}}
+</style>
+</head>
+<body>
+<header>
+<a href="/" class="brand">SOBHAN <span>GANJI.</span></a>
+<nav>
+<a href="/" data-en="Home" data-fa="خانه">Home</a>
+<a href="#collections" data-en="Collections" data-fa="مجموعه‌ها">Collections</a>
+<button class="lang" onclick="toggleLanguage()">FA</button>
+</nav>
+</header>
+
+<section class="hero">
+<div class="eyebrow" data-en="SOUND / MUSIC / VOICE" data-fa="صدا / موسیقی / آواز">SOUND / MUSIC / VOICE</div>
+<h1>MUSIC<span>.</span></h1>
+<p data-en="A collection of sounds, songs, albums, spoken words and musical experiments. Listen to the works and explore their stories."
+data-fa="مجموعه‌ای از صداها، آهنگ‌ها، آلبوم‌ها، کلام و تجربه‌های موسیقایی. آثار را بشنوید و با داستانشان آشنا شوید.">A collection of sounds, songs, albums, spoken words and musical experiments. Listen to the works and explore their stories.</p>
+</section>
+
+<main id="collections">
+<div class="heading"><h2 data-en="Sound Archive" data-fa="آرشیو شنیدنی‌ها">Sound Archive</h2><span>02 / MUSIC</span></div>
+<div class="grid">
+<a class="card" href="#albums"><span class="number">01 / ALBUMS</span><div><h3 data-en="Albums" data-fa="آلبوم‌ها">Albums</h3><p data-en="Complete albums and musical collections." data-fa="آلبوم‌های کامل و مجموعه‌های موسیقی.">Complete albums and musical collections.</p></div></a>
+<a class="card" href="#singles"><span class="number">02 / SINGLES</span><div><h3 data-en="Songs" data-fa="آهنگ‌ها">Songs</h3><p data-en="Individual tracks, singles and collaborations." data-fa="قطعه‌های مستقل، تک‌آهنگ‌ها و همکاری‌ها.">Individual tracks, singles and collaborations.</p></div></a>
+<a class="card" href="#poetry"><span class="number">03 / SPOKEN WORD</span><div><h3 data-en="Recitations" data-fa="دکلمه‌ها">Recitations</h3><p data-en="Poetry readings, spoken word and voice recordings." data-fa="خوانش شعر، کلام و آثار ضبط‌شده با صدا.">Poetry readings, spoken word and voice recordings.</p></div></a>
+<a class="card" href="#experiments"><span class="number">04 / EXPERIMENTS</span><div><h3 data-en="Sound Projects" data-fa="پروژه‌های صوتی">Sound Projects</h3><p data-en="Experimental sounds and other audio creations." data-fa="صداهای تجربی و دیگر آفرینش‌های صوتی.">Experimental sounds and other audio creations.</p></div></a>
+</div>
+<div id="albums" class="note"><h3 data-en="Albums" data-fa="آلبوم‌ها">Albums</h3><p data-en="Album artwork, descriptions and listening links will appear here." data-fa="تصویر جلد، معرفی و لینک شنیدن آلبوم‌ها در این بخش قرار می‌گیرد.">Album artwork, descriptions and listening links will appear here.</p></div>
+<div id="singles" class="note"><h3 data-en="Songs" data-fa="آهنگ‌ها">Songs</h3><p data-en="Individual tracks and singles." data-fa="قطعه‌ها و تک‌آهنگ‌ها.">Individual tracks and singles.</p></div>
+<div id="poetry" class="note"><h3 data-en="Recitations" data-fa="دکلمه‌ها">Recitations</h3><p data-en="Spoken poetry and voice recordings." data-fa="شعرخوانی و آثار صوتی با صدای من.">Spoken poetry and voice recordings.</p></div>
+<div id="experiments" class="note"><h3 data-en="Sound Projects" data-fa="پروژه‌های صوتی">Sound Projects</h3><p data-en="Experiments and independent audio projects." data-fa="تجربه‌ها و پروژه‌های مستقل صوتی.">Experiments and independent audio projects.</p></div>
+</main>
+
+<footer><span>© 2026 SOBHAN GANJI</span><a href="mailto:Sobhan.Ganji@Yahoo.com">CONTACT ↗</a><a href="/">HOME ↗</a></footer>
+<script>
+let language='en';
+function toggleLanguage(){
+language=language==='en'?'fa':'en';
+document.documentElement.lang=language;
+document.documentElement.dir=language==='fa'?'rtl':'ltr';
+document.body.classList.toggle('fa',language==='fa');
+document.querySelectorAll('[data-en]').forEach(el=>el.innerHTML=el.getAttribute('data-'+language));
+document.querySelector('.lang').textContent=language==='en'?'FA':'EN';
+}
+</script>
+</body>
+</html>
