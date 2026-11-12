@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ff0000">
+<title>Hardo — Independent Software Development</title>
+<meta name="description" content="Hardo is an independent software development brand by Sobhan Ganji.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#ff0000;--black:#050505;--white:#f5f5f5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--red);color:var(--black);font-family:'DM Sans',sans-serif}
+body.fa{font-family:'Vazirmatn',sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+header{padding:24px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--black)}
+.brand{font-size:19px;font-weight:900}.brand span{color:var(--white)}
+nav{display:flex;gap:22px;align-items:center}
+nav a,nav button{font-size:11px;font-weight:900;text-transform:uppercase}
+.lang{border:1px solid var(--black);background:transparent;padding:8px 13px}
+.hero{padding:100px 8% 90px;min-height:470px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-size:12px;font-weight:900;letter-spacing:4px;text-transform:uppercase}
+h1{font-size:clamp(75px,15vw,175px);line-height:.85;letter-spacing:-9px;font-weight:900;margin:25px 0}
+.fa h1{letter-spacing:0;line-height:1.2}
+h1 span{color:var(--white)}
+.hero p{font-size:18px;line-height:2;max-width:680px;font-weight:600}
+main{background:var(--black);color:var(--white);padding:85px 8% 110px}
+.heading{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid #444;padding-bottom:20px;margin-bottom:35px}
+h2{font-size:clamp(32px,6vw,65px);font-weight:900;letter-spacing:-3px}.fa h2{letter-spacing:0}
+.heading span{color:var(--red);font-size:12px;font-weight:900}
+.intro{max-width:720px;color:#aaa;font-size:15px;line-height:2;margin-bottom:50px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#333;border:1px solid #333}
+.card{background:var(--black);padding:35px;min-height:260px;display:flex;flex-direction:column;justify-content:space-between;transition:.2s}
+.card:hover{background:var(--red);color:var(--black)}
+.number{color:var(--red);font-size:12px;font-weight:900}.card:hover .number{color:var(--black)}
+.card h3{font-size:clamp(28px,4vw,45px);font-weight:900;margin:25px 0 12px}
+.card p{font-size:14px;color:#aaa;line-height:1.9}.card:hover p{color:var(--black)}
+.card .arrow{align-self:flex-end;font-size:27px;color:var(--red)}
+.card:hover .arrow{color:var(--black)}
+.statement{background:var(--white);color:var(--black);padding:85px 8%}
+.statement h2{font-size:clamp(35px,7vw,75px);line-height:1.1;max-width:850px}
+.statement h2 span{color:var(--red)}
+.statement p{margin-top:25px;max-width:650px;line-height:2}
+footer{background:var(--black);color:var(--white);padding:35px 8%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px}
+footer a{color:var(--red);font-weight:800}
+@media(max-width:650px){header{padding:20px 5%}nav{gap:10px}nav a{font-size:9px}.hero{padding:75px 6%}.hero h1{letter-spacing:-5px}main{padding:65px 6%}.grid{grid-template-columns:1fr}.card{min-height:220px}.statement{padding:65px 6%}footer{padding:30px 6%}}
+</style>
+</head>
+<body>
+<header>
+<a href="/" class="brand">SOBHAN <span>GANJI.</span></a>
+<nav>
+<a href="/" data-en="Home" data-fa="خانه">Home</a>
+<a href="#products" data-en="Products" data-fa="محصولات">Products</a>
+<a href="#about" data-en="About" data-fa="درباره">About</a>
+<button class="lang" onclick="toggleLanguage()">FA</button>
+</nav>
+</header>
 
+<section class="hero">
+<div class="eyebrow" data-en="INDEPENDENT SOFTWARE DEVELOPMENT" data-fa="توسعه مستقل نرم‌افزار">INDEPENDENT SOFTWARE DEVELOPMENT</div>
+<h1>HARDO<span>.</span></h1>
+<p data-en="Turning Ideas Into Intelligent Tools. Hardo is an independent software development brand founded by Sobhan Ganji, focused on building useful digital products and practical tools."
+data-fa="تبدیل ایده‌ها به ابزارهای هوشمند. هردو برند مستقل توسعه نرم‌افزار سبحان گنجی است؛ با تمرکز بر ساخت محصولات دیجیتال و ابزارهای کاربردی.">Turning Ideas Into Intelligent Tools. Hardo is an independent software development brand founded by Sobhan Ganji, focused on building useful digital products and practical tools.</p>
+</section>
+
+<main id="products">
+<div class="heading">
+<h2 data-en="Products" data-fa="محصولات">Products</h2>
+<span>04 / HARDO</span>
+</div>
+<p class="intro" data-en="Independent products and experiments designed to turn ideas into working tools. Explore the projects below."
+data-fa="محصولات مستقل و تجربه‌هایی برای تبدیل ایده‌ها به ابزارهای واقعی. پروژه‌های زیر را ببینید.">Independent products and experiments designed to turn ideas into working tools. Explore the projects below.</p>
+
+<div class="grid">
+<a class="card" href="https://mantec.sobhan-ganji.workers.dev/" target="_blank" rel="noopener">
+<span class="number">01 / LOGIC & ANALYSIS</span>
+<div>
+<h3>MANTEC.</h3>
+<p data-en="A logical analysis tool designed to examine arguments, identify reasoning errors and help people think more clearly."
+data-fa="ابزاری برای تحلیل منطقی متن، بررسی استدلال‌ها و شناسایی خطاهای فکری؛ برای شفاف‌تر اندیشیدن.">A logical analysis tool designed to examine arguments, identify reasoning errors and help people think more clearly.</p>
+</div>
+<span class="arrow">↗</span>
+</a>
+
+<a class="card" href="https://mr-judge.vercel.app/" target="_blank" rel="noopener">
+<span class="number">02 / AI & DECISION</span>
+<div>
+<h3>MR JUDGE.</h3>
+<p data-en="An AI-assisted dispute analysis platform that evaluates arguments from multiple sides and provides structured assessments."
+data-fa="پلتفرمی برای تحلیل اختلاف‌ها با کمک هوش مصنوعی؛ بررسی استدلال‌های طرفین و ارائه ارزیابی ساختاریافته.">An AI-assisted dispute analysis platform that evaluates arguments from multiple sides and provides structured assessments.</p>
+</div>
+<span class="arrow">↗</span>
+</a>
+</div>
+</main>
+
+<section class="statement" id="about">
+<h2 data-en="Build what you <span>believe in.</span>" data-fa="آنچه به آن باور داری، <span>بساز.</span>">Build what you <span>believe in.</span></h2>
+<p data-en="Hardo is an independent creative and software development initiative. Its goal is to transform ideas into accessible, useful and thoughtful digital experiences."
+data-fa="هردو تلاشی مستقل در زمینه خلاقیت و توسعه نرم‌افزار است. هدف آن تبدیل ایده‌ها به تجربه‌های دیجیتال قابل‌دسترس، کاربردی و سنجیده است.">Hardo is an independent creative and software development initiative. Its goal is to transform ideas into accessible, useful and thoughtful digital experiences.</p>
+</section>
+
+<footer>
+<span>© 2026 HARDO — BY SOBHAN GANJI</span>
+<a href="https://github.com/3obhan" target="_blank" rel="noopener">GITHUB ↗</a>
+<a href="/">SOBHAN GANJI ↗</a>
+</footer>
+
+<script>
+let language='en';
+function toggleLanguage(){
+language=language==='en'?'fa':'en';
+document.documentElement.lang=language;
+document.documentElement.dir=language==='fa'?'rtl':'ltr';
+document.body.classList.toggle('fa',language==='fa');
+document.querySelectorAll('[data-en]').forEach(el=>el.innerHTML=el.getAttribute('data-'+language));
+document.querySelector('.lang').textContent=language==='en'?'FA':'EN';
+}
+</script>
+</body>
+</html>
