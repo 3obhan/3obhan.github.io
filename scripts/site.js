@@ -33,6 +33,34 @@
       ? `${new Intl.NumberFormat('fa-IR').format(toman)} تومان`
       : new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(usd);
   }
+  function createArrowIcon() {
+    const ns = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('class', 'arrow-icon');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.setAttribute('focusable', 'false');
+    const path = document.createElementNS(ns, 'path');
+    path.setAttribute('d', 'M7 17 17 7 M7 7h10v10');
+    svg.append(path);
+    return svg;
+  }
+  function convertStaticArrowText() {
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    const candidates = [];
+    while (walker.nextNode()) {
+      if (/\u2197\uFE0F?/u.test(walker.currentNode.nodeValue || '')) candidates.push(walker.currentNode);
+    }
+    candidates.forEach(node => {
+      const parts = (node.nodeValue || '').split(/\u2197\uFE0F?/u);
+      const fragment = document.createDocumentFragment();
+      parts.forEach((part, index) => {
+        if (part) fragment.append(document.createTextNode(part));
+        if (index < parts.length - 1) fragment.append(createArrowIcon());
+      });
+      node.parentNode?.replaceChild(fragment, node);
+    });
+  }
   function translate() {
     html.lang = language;
     html.dir = language === 'fa' ? 'rtl' : 'ltr';
@@ -40,7 +68,9 @@
     document.querySelectorAll('[data-en][data-fa]').forEach(node => {
       const value = node.getAttribute(`data-${language}`) || '';
       if (node.hasAttribute('data-i18n-html') || value.includes('<span>')) node.innerHTML = value;
-      else node.textContent = value;
+      else if (/\u2197\uFE0F?/u.test(value)) {
+        node.replaceChildren(document.createTextNode(value.replace(/\u2197\uFE0F?/gu, '').trimEnd() + ' '), createArrowIcon());
+      } else node.textContent = value;
     });
     document.querySelectorAll('[data-price-toman][data-price-usd]').forEach(node => {
       node.textContent = formatMoney(Number(node.dataset.priceToman), Number(node.dataset.priceUsd), node.dataset.currency || undefined);
@@ -56,6 +86,7 @@
       const label = language === 'fa' ? 'سبد خرید' : 'Cart';
       button.setAttribute('aria-label', `${label}, ${cart.reduce((n, x) => n + x.qty, 0)} ${language === 'fa' ? 'کالا' : 'items'}`);
     });
+    convertStaticArrowText();
     localStorage.setItem(langKey, language);
     renderCart();
   }
